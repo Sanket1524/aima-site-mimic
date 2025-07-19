@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +64,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'aima-red': {
+					DEFAULT: 'hsl(var(--aima-red))',
+					dark: 'hsl(var(--aima-red-dark))'
+				},
+				'aima-gray': {
+					50: 'hsl(var(--aima-gray-50))',
+					100: 'hsl(var(--aima-gray-100))',
+					200: 'hsl(var(--aima-gray-200))',
+					300: 'hsl(var(--aima-gray-300))',
+					400: 'hsl(var(--aima-gray-400))',
+					500: 'hsl(var(--aima-gray-500))',
+					600: 'hsl(var(--aima-gray-600))',
+					700: 'hsl(var(--aima-gray-700))',
+					800: 'hsl(var(--aima-gray-800))',
+					900: 'hsl(var(--aima-gray-900))',
+				},
+				'hero-bg': 'hsl(var(--hero-bg))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
