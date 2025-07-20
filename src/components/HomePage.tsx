@@ -14,7 +14,7 @@ import {
   AlertTriangle,
   Brain
 } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import dashboardMockup from "@/assets/dashboard-mockup.png";
 
 const HomePage = () => {
   const features = [
@@ -135,58 +135,91 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
-        className="relative bg-hero-bg text-white py-24 lg:py-32 overflow-hidden"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="absolute inset-0 bg-hero-bg/80"></div>
+      <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance">
-              AI That Prevents Mistakes.<br />
-              Not Just Detects Them.
-            </h1>
-            <p className="text-xl lg:text-2xl mb-8 text-aima-gray-200 max-w-3xl mx-auto text-balance">
-              Transform your manufacturing operations with intelligent AI that predicts and prevents quality issues, 
-              equipment failures, and efficiency losses before they impact your bottom line.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-aima-red hover:bg-aima-red-dark text-white px-8 py-4 text-lg font-semibold"
-                asChild
-              >
-                <Link to="/demo">Request Demo</Link>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-hero-bg px-8 py-4 text-lg font-semibold"
-                asChild
-              >
-                <Link to="/how-it-works">See How It Works</Link>
-              </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                AI That Prevents Mistakes.<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
+                  Not Just Detects Them.
+                </span>
+              </h1>
+              <p className="text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl leading-relaxed">
+                Never miss a quality issue. Get real-time, AI-powered insights that prevent errors 
+                before they impact your manufacturing operations, products, and delivery.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-aima-red hover:bg-aima-red-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  asChild
+                >
+                  <Link to="/demo">Request Demo</Link>
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 px-8 py-4 text-lg font-semibold rounded-lg backdrop-blur-sm transition-all duration-300"
+                  asChild
+                >
+                  <Link to="/how-it-works">See How It Works</Link>
+                </Button>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="relative">
+                <img 
+                  src={dashboardMockup} 
+                  alt="AIMA Dashboard Interface"
+                  className="w-full h-auto rounded-2xl shadow-2xl border border-white/10 backdrop-blur-sm"
+                  style={{
+                    filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))'
+                  }}
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+              </div>
+              {/* Floating elements for visual interest */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-red-500/20 rounded-full blur-xl animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problems Section */}
-      <section className="py-16 lg:py-24 bg-aima-gray-50">
+      {/* WHY CHOOSE AIMA Section */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-aima-gray-900 mb-4">
-              Manufacturing Challenges That Cost You Money
+            <h2 className="text-sm font-semibold text-aima-red tracking-wide uppercase mb-4">
+              WHY CHOOSE AIMA?
             </h2>
-            <p className="text-xl text-aima-gray-600 max-w-3xl mx-auto">
-              Traditional manufacturing faces critical issues that impact quality, efficiency, and profitability. 
-              AIMA's AI solutions address these challenges head-on.
+            <h3 className="text-3xl lg:text-4xl font-bold text-aima-gray-900 mb-6">
+              The Fastest, Smartest Way to Prevent Quality Issues
+            </h3>
+            <p className="text-xl text-aima-gray-600 max-w-3xl mx-auto mb-12">
+              AIMA replaces hours of manual monitoring with AI-driven insights designed for manufacturing professionals.
             </p>
+            
+            {/* Testimonial Quote */}
+            <div className="max-w-2xl mx-auto mb-16">
+              <blockquote className="text-2xl lg:text-3xl font-light text-aima-gray-800 italic mb-6">
+                "You're streamlining 20 hours of work into a quick search."
+              </blockquote>
+              <div className="flex items-center justify-center gap-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face&auto=format" 
+                  alt="Mike Chen"
+                  className="w-12 h-12 rounded-full"
+                />
+                <div className="text-left">
+                  <div className="font-semibold text-aima-gray-900">Mike Chen</div>
+                  <div className="text-sm text-aima-gray-600">Senior Manufacturing Manager</div>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
