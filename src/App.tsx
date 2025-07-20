@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import Newsletter from "./pages/Newsletter";
 import Legislation from "./pages/Legislation";
 import Insights from "./pages/Insights";
+import Product from "./pages/Product";
+import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -20,9 +22,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/product" element={<Product />} />
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/legislation" element={<Legislation />} />
           <Route path="/insights" element={<Insights />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

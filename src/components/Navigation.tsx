@@ -9,10 +9,11 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "Product", href: "/" },
+    { name: "Product", href: "/product" },
     { name: "Legislation Hub", href: "/legislation" },
     { name: "Insights", href: "/insights" },
     { name: "Newsletter", href: "/newsletter" },
+    { name: "Events", href: "/events" },
     { name: "Contact", href: "/contact" },
   ];
 
